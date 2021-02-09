@@ -1,4 +1,4 @@
-function checkPalindrome(str) {
+function checkPalindrome(q) {
 
     // find the length of a string
     const len = string.length;
