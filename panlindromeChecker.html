@@ -15,11 +15,14 @@
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
               </button>
             </span>
-            <input type="search" name="q" id="q" class="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Enter Palindrome" >
-            <button onclick="checkPalindrome(document.getElementById('q'))"
+            <input type="search" name="str" id="str" class="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Enter Palindrome" >
+            <button onclick="checkPalindrome(document.getElementById('str'))"
             class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-black rounded shadow ripple waves-light hover:shadow-lg focus:outline-none hover:bg-black">
             Enter
           </button>
+          <p id="output" class="font-mono text-3xl font-bold font-bold">
+            
+          </p>
         </div>
         </form>
 
@@ -27,29 +30,21 @@
       </div>
 
                 <script>
-                    function checkPalindrome(q) {
+                   function palindrome(str) {
 
-                    // find the length of a string
-                    const len = q.length;
+                        var len = str.length;
+                        var mid = Math.floor(len/2);
+                        var value;
 
-                    // loop through half of the string
-                    for (let i = 0; i < len / 2; i++) {
-
-                        // check if first and last string are same
-                        if (q[i] !== q[len - 1 - i]) {
-                            return 'It is not a palindrome';
+                        for ( var i = 0; i < mid; i++ ) {
+                            if (str[i] !== str[len - 1 - i]) {
+                                value="Not A Palindrome";
+                            }
                         }
-                    }
-                    return 'It is a palindrome';
-                    }
 
-                   
-                   
-
-                    // call the function
-                    const value = checkPalindrome(q);
-
-                    console.log(value);
+                        value="Palindrome";
+                        }
+                    document.getElementById("output").innerHTML = value;
                 </script>
 </body>
 </html>
