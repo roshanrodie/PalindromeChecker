@@ -23,6 +23,10 @@
           color: #fff;
           font-size: 50px;
         }
+        p{
+          display: block;
+          align-items: center;
+        }
       </style>
 
 
@@ -44,9 +48,11 @@
           </button>
           
            </div>
+           
           <p id="output" class="font-mono my-6 white">
             Palindrome Checker
           </p>
+        
      </div> 
 
                 <script>
@@ -69,30 +75,17 @@
 
                          document.getElementById("output").innerHTML=value;
                         }
+
+                        if(value=" "){
+                          document.getElementById("output").className = "white";
+                        }else if(value="Not A Palindrome"){
+                          document.getElementById("output").className = "redd";
+                        }else{
+                          document.getElementById("output").className = "green";
+                        };
                        
                     
                 </script>
-                <script>
-                  if(value="Palindrome"){
-                  $(document).ready(function(){
-                    $("button").click(function(){
-                      $("p").addClass("redd");
-                    });
-                  });
-                }else if(value="Not A Palindrome"){
-                  $(document).ready(function(){
-                    $("button").click(function(){
-                      $("p").addClass("redd");
-                    });
-                  });
-                }else{
-                  $(document).ready(function(){
-                    $("button").click(function(){
-                      $("p").addClass("white");
-                    });
-                  });
-                }
-            
-                  </script>
+                
 </body>
 </html>
