@@ -8,35 +8,14 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 
-    <script>
-      if(value="Palindrome"){
-      $(document).ready(function(){
-        $("button").click(function(){
-          $("p:first").addClass("green");
-        });
-      });
-    }elseif(value="Not A Palindrome"){
-      $(document).ready(function(){
-        $("button").click(function(){
-          $("p:first").addClass("red");
-        });
-      });
-    }else{
-      $(document).ready(function(){
-        $("button").click(function(){
-          $("p:first").addClass("red");
-        });
-      });
-    };
-
-      </script>
+    
 
       <style>
         .green{
           color: #29ff30;
           font-size: 50px;
         }
-        .red{
+        .redd{
           color: #bd0606;
           font-size: 50px;
         }
@@ -93,5 +72,27 @@
                        
                     
                 </script>
+                <script>
+                  if(value="Palindrome"){
+                  $(document).ready(function(){
+                    $("button").click(function(){
+                      $("p").addClass("redd");
+                    });
+                  });
+                }else if(value="Not A Palindrome"){
+                  $(document).ready(function(){
+                    $("button").click(function(){
+                      $("p").addClass("redd");
+                    });
+                  });
+                }else{
+                  $(document).ready(function(){
+                    $("button").click(function(){
+                      $("p").addClass("red");
+                    });
+                  });
+                }
+            
+                  </script>
 </body>
 </html>
